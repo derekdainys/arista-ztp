@@ -15,6 +15,7 @@ for neighbor in jsonOutput["lldpNeighbors"]:
         subnet = ""  # SPECIFY SUBNET TO BE GIVEN TO SWITCHES IN THE FOLLOWING FORMAT xxx.xxx.xxx. EX: 10.0.0.
         netmask = ""  # SPECIFY NETMASK TO BE GIVEN TO THE SWITCHES IN THE FOLLOWING FORMAT xx EX: 24
         ipAddress = f"{subnet}{number}/{netmask}"
+        password = ""  # SPECIFY PASSWORD TO BE USED FOR THE ADMIN ACCOUNT ON SWITCHES
 
         network = ipaddress.ip_network(ipAddress, strict=False)
         gateway = str(network[1])
@@ -22,7 +23,7 @@ for neighbor in jsonOutput["lldpNeighbors"]:
         config = f"""
 vrf instance MGMT
 !
-username admin secret admin
+username admin secret {password}
 !
 interface Management1
 vrf MGMT
