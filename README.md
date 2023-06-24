@@ -1,6 +1,7 @@
 # arista-ztp-ideas
 
 Different ideas for building scalable solutions for zero touch provisioning process.
+No requirements no identify devices based on Serial or System MAC
 
 lldp-increment
 ---------------------
