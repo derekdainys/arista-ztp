@@ -38,6 +38,12 @@ management api http-commands
         no shutdown
         protocol http
     !
+management ssh
+    no shutdown
+    !
+    vrf MGMT
+        no shutdown
+    !
 !
 """
 
