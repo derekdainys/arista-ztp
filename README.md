@@ -1,7 +1,8 @@
 # arista-ztp-ideas
 
-Different ideas for building scalable solutions for zero touch provisioning process.
-No requirements to identify devices based on Serial or System MAC
+Different ideas for building scalable solutions for Arista ZTP process.
+No requirements to identify devices based on Serial or System MAC.
+Files should be given to every switch during ZTP process via DHCP option 67.
 
 lldp-increment
 ---------------------
